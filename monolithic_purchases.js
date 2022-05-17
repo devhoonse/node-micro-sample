@@ -138,8 +138,6 @@ function register(method, pathname, params, cb) {
         connection.end();
       }
     );
-
-
   }
 }
 

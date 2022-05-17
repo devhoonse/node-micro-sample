@@ -258,6 +258,12 @@ function onDistribute(data) {
       client.connect();
     }
   }
+  console.group('[distributor]');
+  console.log('mapUrls : ', mapUrls);
+  console.log('mapClients : ', mapClients);
+  console.log('mapResponse : ', mapResponse);
+  console.log('mapRR : ', mapRR);
+  console.groupEnd();
 }
 
 /**
@@ -416,7 +422,6 @@ function onRequest(res, method, pathname, params) {
     * 결졍된 마이크로서비스 노드에게 작업 요청 패킷을 전송합니다.
     * */
     clients[mapRR[key] % clients.length].write(packet);
-
   }
 }
 
