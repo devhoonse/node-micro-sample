@@ -24,7 +24,7 @@ class Goods extends TCPServer {
    * 서버가 TCP 서버 인스턴스로서 생성되고,
    * 바로 TCP 서버가 시작됩니다.
    */
-  constructor() {
+  constructor(cluster_no) {
     console.log('[start] process.argv : ', process.argv);
 
     /*
@@ -102,7 +102,7 @@ if (cluster.isMaster) {
   * 자식 프로세스를 1 개 생성합니다.
   * (이 부분을 수정해서 여러 개 생성할 수 있게 하는 것도 좋습니다.)
   * */
-  for (let i = 0 ; i < 1 ; i++) {
+  for (let i = 0 ; i < 3 ; i++) {
     cluster.fork();
   }
 

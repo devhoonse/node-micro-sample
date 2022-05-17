@@ -102,7 +102,7 @@ if (cluster.isMaster) {
   * 자식 프로세스를 1 개 생성합니다.
   * (이 부분을 수정해서 여러 개 생성할 수 있게 하는 것도 좋습니다.)
   * */
-  for (let i = 0 ; i < 1 ; i++) {
+  for (let i = 0 ; i < 3 ; i++) {
     cluster.fork();
   }
 
